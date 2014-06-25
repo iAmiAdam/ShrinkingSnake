@@ -1,15 +1,10 @@
 package info.adamjsmith.shrinkingsnake;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import info.adamjsmith.framework.Screen;
+import info.adamjsmith.framework.impl.AndroidGame;
 
-public class ShrinkingSnakeGame extends Activity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-    }
+public class ShrinkingSnakeGame extends AndroidGame {
+	public Screen getStartScreen() {
+		return new LoadingScreen(this);
+	}
 }
