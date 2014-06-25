@@ -93,7 +93,7 @@ public class GameScreen extends Screen {
 						state = GameState.Running;
 						return;
 					}
-					if(event.y > 148 && event.y <196) {
+					if(event.y > 148 && event.y < 196) {
 						if(Settings.soundEnabled)
 							Assets.click.play(1);
 						game.setScreen(new MainMenuScreen(game));
@@ -146,16 +146,16 @@ public class GameScreen extends Screen {
 		Pixmap foodPixmap = null;
 		if(food.type == Food.TYPE_1)
 			foodPixmap = Assets.food;
-		int x = food.x * 32;
-		int y = food.y * 32;
+		int x = food.x * 48;
+		int y = food.y * 57;
 		g.drawPixmap(foodPixmap, x, y);
 	
 		int len = snake.parts.size();
 		for(int i = 1; i < len; i++) {
 			SnakePart part = snake.parts.get(i);
-			x = part.x * 70;
-			y = part.y * 70;
-			g.drawPixmap(Assets.body, x, y);
+			x = part.x * 48;
+			y = part.y * 57;
+			g.drawPixmap(Assets.body, x - 10, y);
 		}
 		
 		Pixmap headPixmap = null;
@@ -168,9 +168,9 @@ public class GameScreen extends Screen {
 		if(snake.direction == Snake.RIGHT)
 			headPixmap = Assets.headUp;
 		
-		x = head.x * 70;
-		y = head.y * 70;
-		g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
+		x = head.x * 48;
+		y = head.y * 57;
+		g.drawPixmap(headPixmap, x, y);
 	}
 	
 	private void drawReadyUI() {
