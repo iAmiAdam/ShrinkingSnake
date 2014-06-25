@@ -39,14 +39,14 @@ public class HighscoreScreen extends Screen {
 	public void present(float deltaTime) {
 		Graphics g = game.getGraphics();
 		g.drawPixmap(Assets.background, 0, 0);
-		g.drawPixmap(Assets.mainMenu, 139, 20, 2, 115, 452, 45);
+		g.drawPixmap(Assets.mainMenu, 0, 20, 0, 125, 720, 70);
 		
 		int y = 100;
 		for (int i = 0; i < 5; i++) {
 			drawText(g, lines[i], 20, y);
 			y += 50;
 		}
-		g.drawPixmap(Assets.buttons, 0, 1193, 90, 87, 87, 90);
+		g.drawPixmap(Assets.buttons, 0, 1160, 0, 225, 110, 110);
 	}
 
 	public void drawText(Graphics g, String line, int x, int y) {

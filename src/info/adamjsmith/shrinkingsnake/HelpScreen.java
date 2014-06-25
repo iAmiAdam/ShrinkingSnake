@@ -21,7 +21,7 @@ public class HelpScreen extends Screen {
 		for(int i = 0; i < len; i++) {
 			TouchEvent event = touchEvents.get(i);
 			if(event.type == TouchEvent.TOUCH_UP) {
-				if(event.x > 630 && event.y > 1193) {
+				if(event.x > 600 && event.y > 1160) {
 					game.setScreen(new HelpScreen2(game));
 					if(Settings.soundEnabled)
 						Assets.click.play(1);
@@ -36,7 +36,7 @@ public class HelpScreen extends Screen {
 		Graphics g = game.getGraphics();
 		g.drawPixmap(Assets.background, 0, 0);
 		g.drawPixmap(Assets.help1, 64, 100);
-		g.drawPixmap(Assets.buttons, 630, 1193, 0, 86, 90, 172);		
+		g.drawPixmap(Assets.buttons, 600, 1160, 115, 225, 110, 110);		
 	}
 
 	@Override

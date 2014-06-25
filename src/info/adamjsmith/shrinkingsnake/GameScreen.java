@@ -61,10 +61,10 @@ public class GameScreen extends Screen {
 				}
 			}
 			if(event.type == TouchEvent.TOUCH_DOWN){
-				if(event.x < 90 && event.y > 1193) {
+				if(event.x < 110 && event.y > 1160) {
 					world.snake.turnLeft();
 				}
-				if(event.x > 630 && event.y > 1193) {
+				if(event.x > 610 && event.y > 1160) {
 					world.snake.turnRight();
 				}
 			}
@@ -153,8 +153,8 @@ public class GameScreen extends Screen {
 		int len = snake.parts.size();
 		for(int i = 1; i < len; i++) {
 			SnakePart part = snake.parts.get(i);
-			x = part.x * 32;
-			y = part.y * 32;
+			x = part.x * 70;
+			y = part.y * 70;
 			g.drawPixmap(Assets.body, x, y);
 		}
 		
@@ -168,8 +168,8 @@ public class GameScreen extends Screen {
 		if(snake.direction == Snake.RIGHT)
 			headPixmap = Assets.headUp;
 		
-		x = head.x * 32 + 32;
-		y = head.y * 32 + 32;
+		x = head.x * 70;
+		y = head.y * 70;
 		g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
 	}
 	
@@ -177,30 +177,30 @@ public class GameScreen extends Screen {
 		Graphics g = game.getGraphics();
 		
 		g.drawPixmap(Assets.ready, 47, 100);
-		g.drawLine(0, 1190, 720, 1190, Color.WHITE);
+		g.drawLine(0, 1150, 720, 1150, Color.WHITE);
 	}
 	
 	private void drawRunningUI() {
 		Graphics g = game.getGraphics();
 		
-		g.drawPixmap(Assets.buttons, 0, 0, 90, 174, 177, 261);
-		g.drawLine(0, 1190, 720, 1190, Color.WHITE);
-		g.drawPixmap(Assets.buttons, 0, 1193, 90, 87, 180, 174);
-		g.drawPixmap(Assets.buttons, 630, 1193, 0, 87, 180, 90);
+		g.drawPixmap(Assets.buttons, 0, 0, 5, 5, 110, 110);
+		g.drawLine(0, 1150, 720, 1150, Color.WHITE);
+		g.drawPixmap(Assets.buttons, 0, 1160, 0, 225, 110, 110);
+		g.drawPixmap(Assets.buttons, 610, 1160, 115, 225, 110, 110);
 	}
 	
 	private void drawPausedUI() {
 		Graphics g = game.getGraphics();
 		
 		g.drawPixmap(Assets.pause, 80,  100);
-		g.drawLine(0, 1190, 720, 1190, Color.WHITE);
+		g.drawLine(0, 1150, 720, 1150, Color.WHITE);
 	}
 	
 	private void drawGameOverUI() {
 		Graphics g = game.getGraphics();
 		
 		g.drawPixmap(Assets.gameOver, 62, 100);
-		g.drawLine(0, 1190, 720, 1190, Color.WHITE);
+		g.drawLine(0, 1150, 720, 1150, Color.WHITE);
 	}
 	
 	public void drawText(Graphics g, String line, int x, int y) {
