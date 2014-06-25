@@ -32,7 +32,7 @@ public class MainMenuScreen extends Screen{
 						Assets.click.play(1);
 					return;
 				}
-				if(inBounds(event, 136, 264 + 46, 454, 46) ) {
+				if(inBounds(event, 136, 377, 454, 46) ) {
 					game.setScreen(new HighscoreScreen(game));
 					if(Settings.soundEnabled)
 						Assets.click.play(1);
@@ -63,12 +63,12 @@ public class MainMenuScreen extends Screen{
 		
 		g.drawPixmap(Assets.background, 0, 0);
 		g.drawPixmap(Assets.logo, 49, 88);
-		g.drawPixmap(Assets.mainMenu, 131, 260);
+		g.drawPixmap(Assets.mainMenu, 137, 264);
 		
 		if(Settings.soundEnabled) 
-			g.drawPixmap(Assets.buttons, 0, 416, 0, 0, 90, 87);
+			g.drawPixmap(Assets.buttons, 0, 1193, 0, 0, 90, 87);
 		else 
-			g.drawPixmap(Assets.buttons, 0, 416, 90, 0, 90, 87);
+			g.drawPixmap(Assets.buttons, 0, 1193, 90, 0, 90, 87);
 	}
 
 	@Override
