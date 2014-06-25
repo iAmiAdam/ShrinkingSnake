@@ -3,8 +3,8 @@ package info.adamjsmith.shrinkingsnake;
 import java.util.Random;
 
 public class World {
-	static final int WORLD_WIDTH = 10;
-	static final int WORLD_HEIGHT = 13;
+	static final int WORLD_WIDTH = 22;
+	static final int WORLD_HEIGHT = 35;
 	static final int SCORE_INCREMENT = 10;
 	static final float TICK_INITIAL = 0.5f;
 	static final float TICK_DECREMENT = 0.05f;
@@ -82,6 +82,14 @@ public class World {
 					tick -= TICK_DECREMENT;
 				}
 			}
+		}
+	}
+	
+	public int dimensions(String dimension) {
+		if (dimension == "Height") {
+			return WORLD_HEIGHT;
+		} else {
+			return WORLD_WIDTH;
 		}
 	}
 }

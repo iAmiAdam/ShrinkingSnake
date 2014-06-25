@@ -55,13 +55,13 @@ public class Snake {
 		if(direction == RIGHT)
 			head.x += 1;
 		
-		if(head.x <= 0)
-			head.x = 9;
-		if(head.x > 9)
+		if(head.x < 0)
+			head.x = 21;
+		if(head.x > 21)
 			head.x = 0;
 		if(head.y < 0)
-			head.y = 12;
-		if(head.y > 12)
+			head.y = 34;
+		if(head.y > 34)
 			head.y = 0;
 	}
 	

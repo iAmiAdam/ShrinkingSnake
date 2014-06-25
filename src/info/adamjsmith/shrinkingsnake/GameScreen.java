@@ -168,8 +168,8 @@ public class GameScreen extends Screen {
 		if(snake.direction == Snake.RIGHT)
 			headPixmap = Assets.headUp;
 		
-		x = head.x * 32 + 16;
-		y = head.y * 32 + 16;
+		x = head.x * 32 + 32;
+		y = head.y * 32 + 32;
 		g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
 	}
 	
@@ -177,14 +177,14 @@ public class GameScreen extends Screen {
 		Graphics g = game.getGraphics();
 		
 		g.drawPixmap(Assets.ready, 47, 100);
-		g.drawLine(0,  416,  480,  416, Color.WHITE);
+		g.drawLine(0, 1190, 720, 1190, Color.WHITE);
 	}
 	
 	private void drawRunningUI() {
 		Graphics g = game.getGraphics();
 		
-		g.drawPixmap(Assets.buttons, 0, 0, 64, 128, 64, 64);
-		g.drawLine(0, 416, 480, 416, Color.BLACK);
+		g.drawPixmap(Assets.buttons, 0, 0, 90, 174, 177, 261);
+		g.drawLine(0, 1190, 720, 1190, Color.WHITE);
 		g.drawPixmap(Assets.buttons, 0, 1193, 90, 87, 180, 174);
 		g.drawPixmap(Assets.buttons, 630, 1193, 0, 87, 180, 90);
 	}
@@ -193,14 +193,14 @@ public class GameScreen extends Screen {
 		Graphics g = game.getGraphics();
 		
 		g.drawPixmap(Assets.pause, 80,  100);
-		g.drawLine(0, 416, 480, 416, Color.WHITE);
+		g.drawLine(0, 1190, 720, 1190, Color.WHITE);
 	}
 	
 	private void drawGameOverUI() {
 		Graphics g = game.getGraphics();
 		
 		g.drawPixmap(Assets.gameOver, 62, 100);
-		g.drawLine(0,  416,  480, 416, Color.WHITE);
+		g.drawLine(0, 1190, 720, 1190, Color.WHITE);
 	}
 	
 	public void drawText(Graphics g, String line, int x, int y) {
