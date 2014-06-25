@@ -8,9 +8,9 @@ import android.graphics.Bitmap.Config;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
+import android.util.DisplayMetrics;
 import android.view.Window;
 import android.view.WindowManager;
-
 import info.adamjsmith.framework.Audio;
 import info.adamjsmith.framework.FileIO;
 import info.adamjsmith.framework.Game;
@@ -35,12 +35,17 @@ public class AndroidGame extends Activity implements Game{
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		
 		boolean isLandscape=getResources().getConfiguration().orientation ==  Configuration.ORIENTATION_LANDSCAPE;
-		int frameBufferWidth=isLandscape ? 480: 320;
-		int frameBufferHeight=isLandscape ? 320: 480;
+		int frameBufferWidth=isLandscape ? 720 : 1280;
+		int frameBufferHeight=isLandscape ? 1280 : 720;
 		Bitmap frameBuffer=Bitmap.createBitmap(frameBufferWidth, frameBufferHeight, Config.RGB_565);
 		
-		float scaleX = (float) frameBufferWidth / getWindowManager().getDefaultDisplay().getWidth();
-		float scaleY = (float) frameBufferHeight / getWindowManager().getDefaultDisplay().getWidth();
+		DisplayMetrics displayMetrics = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+		int screenWidth = displayMetrics.widthPixels;
+		int screenHeight = displayMetrics.heightPixels;
+		
+		float scaleX = (float) frameBufferWidth / screenWidth;
+		float scaleY = (float) frameBufferHeight / screenHeight;
 		
 		renderView = new AndroidFastRenderView(this, frameBuffer);
 		graphics = new AndroidGraphics(getAssets(), frameBuffer);

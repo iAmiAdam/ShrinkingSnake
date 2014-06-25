@@ -21,7 +21,7 @@ public class MainMenuScreen extends Screen{
 		for (int i = 0; i < len; i++) {
 			TouchEvent event = touchEvents.get(i);
 			if(event.type == TouchEvent.TOUCH_UP) {
-				if(inBounds(event, 0, g.getHeight() - 64, 64, 64)) {
+				if(inBounds(event, 0, g.getHeight() - 87, 90, 87)) {
 					Settings.soundEnabled = !Settings.soundEnabled;
 					if(Settings.soundEnabled)
 						Assets.click.play(1);
@@ -68,7 +68,7 @@ public class MainMenuScreen extends Screen{
 		if(Settings.soundEnabled) 
 			g.drawPixmap(Assets.buttons, 0, 416, 0, 0, 90, 87);
 		else 
-			g.drawPixmap(Assets.buttons, 0, 416, 90, 0, 64, 64);
+			g.drawPixmap(Assets.buttons, 0, 416, 90, 0, 90, 87);
 	}
 
 	@Override
