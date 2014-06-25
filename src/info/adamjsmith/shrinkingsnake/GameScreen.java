@@ -154,7 +154,7 @@ public class GameScreen extends Screen {
 		for(int i = 1; i < len; i++) {
 			SnakePart part = snake.parts.get(i);
 			x = part.x * 32;
-			x = part.y * 32;
+			y = part.y * 32;
 			g.drawPixmap(Assets.body, x, y);
 		}
 		

@@ -51,7 +51,7 @@ public class World {
 				}
 			}
 		}
-		food = new Food(foodX, foodY, random.nextInt(3));
+		food = new Food(foodX, foodY, random.nextInt(1));
 	}
 	
 	public void update(float deltaTime) {
