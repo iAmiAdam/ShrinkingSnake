@@ -102,4 +102,10 @@ public class AndroidGame extends Activity implements Game{
 	public Screen getCurrentScreen() {
 		return screen;
 	}
+
+	@Override
+	public Screen getStartScreen() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
