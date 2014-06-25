@@ -26,7 +26,7 @@ public class HighscoreScreen extends Screen {
 		for(int i = 0; i < len; i++) {
 			TouchEvent event = touchEvents.get(i);
 			if (event.type == TouchEvent.TOUCH_UP) {
-				if (event.x < 90 && event.y < 1193) {
+				if (event.x < 90 && event.y > 1193) {
 					if(Settings.soundEnabled)
 						Assets.click.play(1);
 					game.setScreen(new MainMenuScreen(game));
