@@ -41,9 +41,9 @@ public class HighscoreScreen extends Screen {
 		g.drawPixmap(Assets.background, 0, 0);
 		g.drawPixmap(Assets.mainMenu, 0, 20, 0, 125, 720, 70);
 		
-		int y = 100;
+		int y = 300;
 		for (int i = 0; i < 5; i++) {
-			drawText(g, lines[i], 83, y);
+			drawText(g, lines[i], 40, y);
 			y += 100;
 		}
 		g.drawPixmap(Assets.buttons, 0, 1160, 0, 225, 110, 110);
@@ -69,7 +69,7 @@ public class HighscoreScreen extends Screen {
 				srcWidth = 100;
 			}
 			
-			g.drawPixmap(Assets.numbers, x, y, srcX, 0, srcWidth, 83);
+			g.drawPixmap(Assets.numbers, x, y, srcX, 0, srcWidth, 100);
 			x += srcWidth;
 		}
 	}
