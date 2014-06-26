@@ -43,8 +43,8 @@ public class HighscoreScreen extends Screen {
 		
 		int y = 100;
 		for (int i = 0; i < 5; i++) {
-			drawText(g, lines[i], 20, y);
-			y += 50;
+			drawText(g, lines[i], 83, y);
+			y += 100;
 		}
 		g.drawPixmap(Assets.buttons, 0, 1160, 0, 225, 110, 110);
 	}
@@ -61,15 +61,15 @@ public class HighscoreScreen extends Screen {
 			
 			int srcX = 0;
 			int srcWidth = 0;
-			if(character == '.') {
-				srcX = 200;
-				srcWidth = 10;
+			if (character == '.') {
+				srcX = 991;
+				srcWidth = 40;
 			} else {
-				srcX = (character - '0') * 20;
-				srcWidth = 20;
+				srcX = (character - '0') * 100;
+				srcWidth = 100;
 			}
 			
-			g.drawPixmap(Assets.numbers, x, y, srcX, 0, srcWidth, 32);
+			g.drawPixmap(Assets.numbers, x, y, srcX, 0, srcWidth, 83);
 			x += srcWidth;
 		}
 	}

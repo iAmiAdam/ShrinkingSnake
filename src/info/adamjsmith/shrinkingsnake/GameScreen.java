@@ -3,7 +3,6 @@ package info.adamjsmith.shrinkingsnake;
 import java.util.List;
 
 import android.graphics.Color;
-
 import info.adamjsmith.framework.Game;
 import info.adamjsmith.framework.Graphics;
 import info.adamjsmith.framework.Input.TouchEvent;
@@ -134,7 +133,7 @@ public class GameScreen extends Screen {
 		if(state == GameState.GameOver)
 			drawGameOverUI();
 		
-		drawText(g, score, g.getWidth() / 2 - score.length()*20 / 2, g.getHeight() - 42);
+		drawText(g, score, g.getWidth() / 2 - score.length()*100 / 2, g.getHeight() - 100);
 	}
 	
 	private void drawWorld(World world) {
@@ -153,7 +152,7 @@ public class GameScreen extends Screen {
 		int len = snake.parts.size();
 		for(int i = 1; i < len; i++) {
 			SnakePart part = snake.parts.get(i);
-			x = part.x * 77 + 3;
+			x = part.x * 77;
 			y = part.y * 77;
 			g.drawPixmap(Assets.body, x , y);
 		}
@@ -168,7 +167,7 @@ public class GameScreen extends Screen {
 		if(snake.direction == Snake.RIGHT)
 			headPixmap = Assets.head;
 		
-		x = head.x * 77 ;
+		x = head.x * 77;
 		y = head.y * 77;
 		g.drawPixmap(headPixmap, x, y);
 	}
@@ -216,14 +215,14 @@ public class GameScreen extends Screen {
 			int srcX = 0;
 			int srcWidth = 0;
 			if (character == '.') {
-				srcX = 200;
-				srcWidth = 10;
+				srcX = 991;
+				srcWidth = 40;
 			} else {
-				srcX = (character - '0') * 20;
-				srcWidth = 20;
+				srcX = (character - '0') * 100;
+				srcWidth = 100;
 			}
 			
-			g.drawPixmap(Assets.numbers, x, y, srcX, 0, srcWidth, 32);
+			g.drawPixmap(Assets.numbers, x, y, srcX, 0, srcWidth, 83);
 			x += srcWidth;
 		}
 	}
