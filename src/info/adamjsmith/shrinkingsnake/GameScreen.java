@@ -146,30 +146,30 @@ public class GameScreen extends Screen {
 		Pixmap foodPixmap = null;
 		if(food.type == Food.TYPE_1)
 			foodPixmap = Assets.food;
-		int x = food.x * 48;
-		int y = food.y * 57;
+		int x = food.x * 77;
+		int y = food.y * 77;
 		g.drawPixmap(foodPixmap, x, y);
 	
 		int len = snake.parts.size();
 		for(int i = 1; i < len; i++) {
 			SnakePart part = snake.parts.get(i);
-			x = part.x * 48;
-			y = part.y * 57;
-			g.drawPixmap(Assets.body, x - 10, y);
+			x = part.x * 77 + 3;
+			y = part.y * 77;
+			g.drawPixmap(Assets.body, x , y);
 		}
 		
 		Pixmap headPixmap = null;
 		if(snake.direction == Snake.UP)
-			headPixmap = Assets.headUp;
+			headPixmap = Assets.head;
 		if(snake.direction == Snake.LEFT)
-			headPixmap = Assets.headLeft;
+			headPixmap = Assets.head;
 		if(snake.direction == Snake.DOWN)
-			headPixmap = Assets.headDown;
+			headPixmap = Assets.head;
 		if(snake.direction == Snake.RIGHT)
-			headPixmap = Assets.headUp;
+			headPixmap = Assets.head;
 		
-		x = head.x * 48;
-		y = head.y * 57;
+		x = head.x * 77 ;
+		y = head.y * 77;
 		g.drawPixmap(headPixmap, x, y);
 	}
 	
@@ -199,7 +199,7 @@ public class GameScreen extends Screen {
 	private void drawGameOverUI() {
 		Graphics g = game.getGraphics();
 		
-		g.drawPixmap(Assets.gameOver, 62, 100);
+		g.drawPixmap(Assets.gameOver, 0, 510);
 		g.drawLine(0, 1150, 720, 1150, Color.WHITE);
 	}
 	

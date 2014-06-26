@@ -56,12 +56,12 @@ public class Snake {
 			head.x += 1;
 		
 		if(head.x < 0)
-			head.x = 14;
-		if(head.x > 14)
+			head.x = 8;
+		if(head.x > 8)
 			head.x = 0;
 		if(head.y < 0)
-			head.y = 19;
-		if(head.y > 19)
+			head.y = 14;
+		if(head.y > 14)
 			head.y = 0;
 	}
 	

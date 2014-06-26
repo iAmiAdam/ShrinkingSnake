@@ -25,11 +25,12 @@ public class LoadingScreen extends Screen{
 		Assets.ready = g.newPixmap("ready.png", PixmapFormat.ARGB4444);
 		Assets.pause = g.newPixmap("pausemenu.png", PixmapFormat.ARGB4444);
 		Assets.gameOver = g.newPixmap("gameover.png", PixmapFormat.ARGB4444);
-		Assets.headDown = g.newPixmap("headdown.png", PixmapFormat.ARGB4444);
-		Assets.headLeft = g.newPixmap("headleft.png", PixmapFormat.ARGB4444);
-		Assets.headUp = g.newPixmap("headright.png", PixmapFormat.ARGB4444);
+		Assets.headDown = g.newPixmap("head.png", PixmapFormat.ARGB4444);
+		Assets.headLeft = g.newPixmap("head.png", PixmapFormat.ARGB4444);
+		Assets.headUp = g.newPixmap("head.png", PixmapFormat.ARGB4444);
 		Assets.body = g.newPixmap("body.png", PixmapFormat.ARGB4444);
 		Assets.food = g.newPixmap("food.png", PixmapFormat.ARGB4444);
+		Assets.head = g.newPixmap("head.png", PixmapFormat.ARGB4444);
 		Assets.click = game.getAudio().newSound("click.ogg");
 		Assets.gameOverSound = game.getAudio().newSound("gameover.ogg");
 		Settings.load(game.getFileIO());
